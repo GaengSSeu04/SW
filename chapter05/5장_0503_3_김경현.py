@@ -13,7 +13,6 @@
 # 4. 수가 10까지 반복하면서 (num)
 #       a 수를 1 증가시킨다.
 #   1) 만약에 수가 입력받은 수의 배수이면 :
-#        ? 수를 1 증가 시킨다.
 #       1 합계를 계산한다.
 #       b-1 수를 1 증가시킨다.
 #       c 수를 1 증가시킨다.
@@ -22,3 +21,45 @@
 #       1 다시 처음으로 돌아간다. continue
 #   e 수를 1 증가시킨다.
 # 5. 합계를 출력한다.
+
+input_num = int(input("정수 입력하시오 : "))
+num = 0
+sum = 0
+while num <= 10 : 
+    num = num + 1   # 증감식
+    if num % input_num == 0 :
+        sum = sum + num
+    else :
+        continue
+print("{}의 배수의 합 : {}" .format(input_num,sum))
+
+print("===============================")
+
+input_num = int(input("정수 입력하시오 : "))
+num = 0
+sum = 0
+while num <= 10 : 
+    if num % input_num == 0 :
+        sum = sum + num
+        num = num + 1   # 증감식
+    else :
+        num = num + 1   # 증감식
+        continue
+print("{}의 배수의 합 : {}" .format(input_num,sum))
+
+print("= for 반복문 ===============================")
+
+input_num = int(input("정수 입력하시오 : "))
+
+sum = 0
+
+for num in range(1, 11) :
+    if num % input_num != 0 :
+        continue
+    else :
+        sum = sum + num
+         
+print("{}의 배수의 합 : {}" .format(input_num,sum))
+
+
+

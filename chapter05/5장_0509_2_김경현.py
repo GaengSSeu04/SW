@@ -17,10 +17,12 @@ while num <= 5 :
     if 0 < poi < 100 :
         sum = sum + poi
         print("{} 번째 과목점수 {}" .format(num, poi))
+        num = num + 1
     else:
 #   1)"유효한 성적이 아닙니다 출력"
         print("유효한 성적이 아닙니다")
         continue
 # 3. 5과목의 총점을 계산하여 출력한다.
-
+print("총점은 {} 입니다" .format(sum))
+print("평균은 {} 입니다" .format(sum/5))
 
